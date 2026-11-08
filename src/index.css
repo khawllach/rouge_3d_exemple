@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --shade: #e8a5b0; }
+body { background: #fffafb; color: #3a2a2e; @apply font-sans overflow-x-hidden; }
+#glow {
+  position: fixed; inset: 0; z-index: 0; transition: background .6s;
+  background:
+    radial-gradient(60% 50% at 70% 50%, color-mix(in srgb, var(--shade) 35%, transparent), transparent 70%),
+    linear-gradient(180deg, #fff, #fff0f3 60%, #fff);
+}
+section { min-height: 100vh; display: flex; align-items: center; padding: 0 6vw; }
